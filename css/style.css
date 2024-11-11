@@ -1,118 +1,192 @@
-/* Reset default margins and padding */
-* {
+/* Global styles for the entire website */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* General styles for the whole page */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f0f4f8;
     color: #333;
-    padding: 20px;
 }
 
-/* Header styles */
 header {
-    background-color: #333;
+    background-color: #2d3a4b;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+header nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-header p {
-    font-size: 18px;
+header nav ul li {
+    display: inline;
+    margin-right: 30px;
 }
 
-/* Main content section */
-main {
-    margin-top: 20px;
-}
-
-/* Section styling */
-section {
-    background-color: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling for headings inside sections */
-h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Link styles */
-a {
-    color: #337ab7;
+header nav ul li a {
+    color: #fff;
     text-decoration: none;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-a:hover {
-    text-decoration: underline;
+header nav ul li a:hover {
+    color: #ff6347;
 }
 
-/* Footer styles */
 footer {
-    background-color: #333;
+    background-color: #2d3a4b;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    font-size: 0.9em;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-/* Add responsiveness for smaller screens */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    body {
-        padding: 10px;
-    }
-
-    section {
-        margin: 10px 0;
-    }
+/* Main content styles */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Styling for the timeline page */
-.timeline-item {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 15px;
-    border-left: 5px solid #337ab7;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-item h3 {
-    font-size: 24px;
-    color: #333;
-}
-
-.timeline-item p {
-    font-size: 18px;
-    color: #666;
-}
-
-/* Add some space between sections on the homepage */
-section + section {
+/* Main Page Styles */
+.main-page-content {
+    background: linear-gradient(145deg, #ff6347, #ff7f50);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     margin-top: 30px;
+}
+
+.main-page-content h1 {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.main-page-content p {
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Timeline Styles */
+.timeline {
+    margin: 50px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #f5a623;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.timeline-item:hover {
+    background-color: #f5a623;
+    transform: translateY(-10px);
+}
+
+.timeline-year {
+    font-weight: bold;
+    color: #ff6347;
+    margin-right: 20px;
+    font-size: 22px;
+    width: 100px;
+    text-align: center;
+}
+
+.timeline-event {
+    font-size: 1.3em;
+    color: #333;
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* Influential Games Styles */
+.influential-games {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.influential-games h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+.influential-games ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.influential-games li {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 2px solid #ff6347;
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.influential-games li:hover {
+    background-color: #ff6347;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Add hover effect on influential games list items */
+.influential-games li:hover {
+    cursor: pointer;
+}
+
+/* General Button Styles */
+button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e53d2f;
 }
