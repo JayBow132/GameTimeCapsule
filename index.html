@@ -1,44 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamingTimeCapsule</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <header>
-        <h1>GamingTimeCapsule</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="influential-games.html">Influential Games</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">GamingTimeCapsule</a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
     </header>
-    
-    <section class="intro">
-        <h2>Cool Facts About Gaming</h2>
-        <p>Did you know that the first video game ever created was the 1958 game "Tennis for Two"? It was a simple tennis simulation made for an oscilloscope. The game was designed by physicist William Higinbotham, who never profited from his invention.</p>
-        
-        <p>The gaming industry as we know it today started in the early 1970s with the release of arcade games like <i>Pong</i> by Atari. This marked the beginning of a cultural shift as gaming began to grow in popularity, reaching arcades and living rooms around the world.</p>
-        
-        <p>By the mid-1980s, video game consoles like the Nintendo Entertainment System (NES) revolutionized home gaming. These consoles allowed games to be more advanced, colorful, and immersive than ever before, and they laid the foundation for the future of gaming.</p>
-        
-        <h2>Key Milestones in Gaming History</h2>
-        <ul>
-            <li><strong>1972:</strong> The release of <i>Pong</i> by Atari, the first commercially successful arcade game, ushered in the era of arcade gaming.</li>
-            <li><strong>1980:</strong> The arcade game <i>Space Invaders</i> becomes a global sensation and introduces the concept of high score competition.</li>
-            <li><strong>1985:</strong> The launch of the Nintendo Entertainment System (NES) and iconic games like <i>Super Mario Bros.</i> redefine gaming for a new generation.</li>
-            <li><strong>1991:</strong> The release of <i>Sonic the Hedgehog</i> by Sega leads to the fierce rivalry between Sega and Nintendo in the '90s.</li>
-            <li><strong>1997:</strong> <i>Final Fantasy VII</i> becomes one of the first games to have cinematic-quality cutscenes, helping establish role-playing games (RPGs) as a major genre.</li>
-            <li><strong>2001:</strong> The Xbox is launched by Microsoft, introducing the world to <i>Halo</i>, which becomes one of the best-selling franchises ever.</li>
-        </ul>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hello, I'm Joseph</h1>
+                <p>A Senior UI Designer based in Canada.</p>
+                <p>With years of experience and a passion for <strong>cutting-edge design</strong>, I’m committed to
+                    creating impactful user interfaces.</p>
+                <a href="#projects" class="hero-button">See My Work</a>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 GamingTimeCapsule</p>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="title">Skills</h2>
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML5">
+                    </div>
+                    <h3>HTML5</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level html"></div>
+                    </div>
+                    <div class="skill-percentage" data-skill="90">0%</div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS3">
+                    </div>
+                    <h3>CSS3</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level css"></div>
+                    </div>
+                    <div class="skill-percentage" data-skill="80">0%</div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level javascript"></div>
+                    </div>
+                    <div class="skill-percentage" data-skill="75">0%</div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React">
+                    </div>
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level react"></div>
+                    </div>
+                    <div class="skill-percentage" data-skill="85">0%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2>My Journey</h2>
+            <p>Here are some milestones I’ve achieved over the years:</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Started My Web Development Journey</h3>
+                        <p>Started learning HTML, CSS, and JavaScript. Took online courses and built my first project.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>Learned React</h3>
+                        <p>Explored React.js and built my first React application. Learned component-based architecture
+                            and state management.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2026</div>
+                    <div class="timeline-content">
+                        <h3>Launched My Portfolio Website</h3>
+                        <p>Built and launched my personal portfolio website showcasing my skills and projects. It was a
+                            great milestone for me.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2027</div>
+                    <div class="timeline-content">
+                        <h3>Started Contributing to Open Source</h3>
+                        <p>Contributed to open source projects on GitHub. Learned from the community and improved my
+                            coding skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, please fill out the form below:</p>
+            <form action="your-backend-endpoint" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="Enter the subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Enter your message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
     </footer>
+
+
+
+
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
